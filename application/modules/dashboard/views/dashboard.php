@@ -52,6 +52,11 @@
           <?php } ?>
          
         </div>
+				 <div class="row">
+        <div class="col">
+          <?php echo $pagination; ?>
+        </div>
+      </div>
       </div><!-- /.container-fluid -->
     </section>
 
