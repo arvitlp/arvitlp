@@ -1,9 +1,9 @@
 <?php
 
 class Model_barang extends CI_Model{
-	public function tampil_data()
+	public function tampil_data($limit,$start)
 	{
-		return $this->db->get('tb_barang');
+		return $this->db->get('tb_barang',$limit,$start);
 	}
 	public function tambah_barang($data,$table)
 	{
