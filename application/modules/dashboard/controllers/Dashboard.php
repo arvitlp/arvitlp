@@ -75,4 +75,14 @@ $this->cart->insert($data);
 		$this->load->view('detail_barang',$data);
 		$this->load->view('templates/footer');
 	 }
+	public function search()
+	{
+
+		$keyword = $this->input->post('keyword');
+		$data['barang'] = $this->model_barang->get_keyword($keyword);
+		$this->load->view('template_admin/header');
+		$this->load->view('template_admin/sidebar');
+		$this->load->view('data_barang', $data);
+		$this->load->view('template_admin/footer');
+	}
 }
